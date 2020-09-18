@@ -1,14 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import index from '../views/index.vue'
+import landscape from '../views/landscape.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'index',
+    component: index
+  },
+  {
+    path: '/landscape',
+    name: 'landscape',
+    component: landscape
   },
   {
     path: '/about',

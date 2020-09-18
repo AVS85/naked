@@ -1,0 +1,136 @@
+$accentGrey: #979797
+
+$bgDark: #001833
+$bgLite: #F2F2F2
+
+$border: #003562
+
+$fzTopMenu: 16px
+
+
+@font-face
+    font-family: 'header'
+    src: url("/assets/fonts/gilroy-medium.ttf") format("opentype")
+
+@font-face
+    font-family: 'text'
+    src: url("/assets/fonts/gilroy-regular.ttf") format("opentype")
+
+
+html
+    font-size: 10px !important
+    // @media screen and (max-width:900px)
+    //     font-size: 9px !important
+    // @media screen and (max-width:800px)
+    //     font-size: 8px !important
+    // @media screen and (max-width:700px)
+    //     font-size: 7px !important
+    // @media screen and (max-width:600px)
+    //     font-size: 6px !important
+    // @media screen and (max-width:500px)
+    //     font-size: 5px !important
+    // @media screen and (max-width:400px)
+    //     font-size: 4px !important
+body
+    // position: relative
+    // z-index: 1
+    background-color: #fff
+    font-family: 'text', sans-serif
+    // margin: 0
+    // overflow-y: scroll
+
+    // padding: 2.5rem
+h1, h2, h3, h4, h5, h6
+    // text-transform: uppercase
+    font-family: 'header', sans-serif 
+    margin: 0
+    // letter-spacing: 1px
+h1
+    font-size: 36px
+    
+h2
+    // font-size: 48px
+    // font-size: 4.8vmax
+    // @media (min-width: 600px) 
+    //     font-size: 52px
+        
+h3
+     font-size: 2.8rem
+     padding: 14px 0 28px 0
+h4
+     font-size: 1.2rem
+     padding: 12px 0 24px 0
+
+h5, h6
+     font-size: 20px
+
+p
+    font-size: inherit
+    line-height: inherit
+    // font-size: 18px
+    // font-size: calc(18px + 0.5vmax)
+    // line-height: 28px
+    // line-height: calc(28px + 0.5vmax)
+    font-family: 'text'
+
+.container
+    // max-width: 1440px
+.blockTypeMain
+    // border-bottom: 1px solid rgba(black, .15)
+    padding: 7vmax 0 7vmax 0
+    @media (min-width: 510px) 
+        padding: 120px 0 120px 0
+        
+    .blockHeader
+        // border: 1px solid red
+        padding-bottom: 4.68vmax
+        @media (min-width: 510px) 
+            padding-bottom: 90px 
+        .title
+            font-size: 4.68vmax
+            @media (min-width: 510px) 
+                font-size: 52px
+        .subtitle
+            padding-top: 3.12vmax
+            font-size: 1.8vmax
+            line-height: 2.8vmax
+
+            @media (min-width: 510px) 
+                padding-top: 60px
+                font-size: 18px
+                line-height: 28px
+ 
+
+
+// *** 2019-11-19 *** getcode-normalized
+//УБИРАЕТ РАМКУ ПРИ ФОКУСЕ
+input, button
+    &:focus
+        outline: none
+//УБИРАЕТ ПОДСВЕТКУ ПРИ НАВЕДЕНИИ
+a
+    // color: $text_lite
+    text-decoration: none
+    &:hover
+        text-decoration: none
+
+//УБИРАЕТ СТРЕЛКИ ИЗ input[number]
+input[type='number']
+    -moz-appearance: textfield
+//Chrome:
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+//Firefox:
+input[type="number"] 
+    -moz-appearance: textfield,
+input[type="number"]:hover,
+input[type="number"]:focus 
+    -moz-appearance: textfield
+//Для других
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: none
+    margin: 0
+
