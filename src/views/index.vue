@@ -1,5 +1,6 @@
 <template>
-  <div class="indexLayout">
+  <div class="indexLayout"
+  style="background-image: url(/assets/bg/index-landscape.jpg)">
 
     <menuTop /> 
 
@@ -7,21 +8,29 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide slide">
           <div class="img"><img src="/assets/icons/landscape.svg" alt=""></div>
-          <div class="desc">ddddddddddddddd</div>
-          <div class="btn"><button>Подробнее</button></div>
+          <div class="desc">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</div>
+          <div class="outBtn">
+            <router-link to="/landscape" class="innerBtn">Подробнее</router-link>
+          </div>
         </div>
         <div class="swiper-slide slide">
-          <div class="img"><img src="/assets/icons/landscape.svg" alt=""></div>
-          <div class="desc">122222222222222</div>
-          <div class="btn"><button>Подробнее</button></div>
+          <div class="img"><img src="/assets/icons/collection.svg" alt=""></div>
+          <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, dignissimos nesciunt optio at debitis harum ipsum adipisci quae? Optio molestias velit ducimus nobis recusandae eum alias suscipit consequatur nisi voluptates.</div>
+          <div class="outBtn">
+            <router-link to="/landscape" class="innerBtn">Подробнее</router-link>
+          </div>
         </div>
       </div> 
-      <div class="swiper-button-next">12</div>
-      <div class="swiper-button-prev">23</div> 
+      <!-- <div class="swiper-button-next">12</div> -->
+      <!-- <div class="swiper-button-prev">23</div>  -->
     </div>
-    <button>+</button>
-    <div class="footer">
-      © Naked, 2020. Все права защищены
+    <div class="indexFooter container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-auto">© Naked, 2020. Все права защищены</div>
+        <div class="col-auto">pagginations</div>
+        <div class="col-auto">Разработка сайта: Outlier</div>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -34,6 +43,8 @@
 .indexLayout
   border: 1px solid red
   background: #949494
+  background-repeat: no-repeat
+  background-size: cover
   display: flex
   flex-direction: column
   flex-wrap: nowrap
@@ -43,10 +54,52 @@
   // max-width: 100%
   .indexSlider
     border: 1px solid red
+    color: #fff
+    padding: 64px 0 64px 0
     .slide
       border: 1px solid green
       // width: 100%
       // min-height: 100
+      .img
+        border: 1px solid green
+        width: 100%
+        overflow: hidden
+        img
+          // width: 100%
+          @media (max-width: 992px)
+            width: 100%
+
+      .desc
+        border: 1px solid yellow
+
+        font-size: 18px
+        line-height: 28px
+        padding: 38px 0 38px 0
+        max-width: 750px
+      .outBtn
+        border: 1px solid #fff
+        height: 67px
+        width: 187px
+        .innerBtn
+          display: flex
+          align-items: center
+          border-color: #fff
+          border-style: solid
+          border-width: 0 1px 1px 0
+          background-color: transparent
+          background-image: url(/assets/icons/arrowRightBtn.svg)
+          background-repeat: no-repeat
+          background-position: 90% 50%
+          background-size: 12px
+          color: #fff
+          font-size: 18px
+          font-weight: bold
+          padding-left: 15px
+          height: 60px
+          width: 180px
+  
+  .indexFooter
+    color: #fff
 </style>
 
 
@@ -76,7 +129,7 @@ export default {
       // loopPreventsSlide: true,
       // slideToClickedSlide: true,
       // effect: 'fade',
-      // speed: 500,
+      speed: 500,
       // grabCursor: true,
       // autoplay: {
       //   delay: 0,

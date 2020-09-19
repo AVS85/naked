@@ -2,7 +2,7 @@
   <div class="home">
     <!-- <menuTop />  -->
     <mainBlock />
-    <design />
+    <landscape />
     <footer2 />
   </div>
 </template>
@@ -18,7 +18,7 @@
 // @ is an alias to /src
 // import menuTop from '@/components/menuTop.vue'
 import mainBlock from '@/components/landscape/main.vue'
-import design from '@/components/landscape/design.vue'
+import landscape from '@/components/landscape/landscape.vue'
 // import HelloWorld from '@/components/HelloWorld.vue'
 
 import footer2 from '@/components/footer2.vue'
@@ -29,7 +29,7 @@ export default {
   components: {
     // menuTop,
     mainBlock,
-    design,
+    landscape,
     footer2
   }
 }

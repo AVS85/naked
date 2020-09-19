@@ -1,26 +1,28 @@
 <template>
   <div class="container-fluid mainSlide">
+
     <div class="bgMainSlide"
-    style="background-image: url(/assets/bg/landscape-main.jpg)"></div>
+    style="background-image: url(/assets/bg/park-angelov-main.jpg)"></div>
 
     <menuTop /> 
-
-    <div class="labelMainSlide">
-        <img src="assets/icons/landscape.svg" alt="">
-    </div>
- 
-    <div class="btnNav">
-        <router-link to="#" v-scroll-to="'#lsDesign'" class="btn">Проектирование</router-link> 
-        <router-link to="#" v-scroll-to="'#lsManufacture'" class="btn">Производство</router-link> 
-        <router-link to="#" v-scroll-to="'#lsMaterials'" class="btn">Материалы</router-link> 
-        <router-link to="#" v-scroll-to="'#lsProjects'" class="btn">Реализованные проекты</router-link> 
+    
+    <div class="blockTitle">
+      <div class="title">ПАРК АНГЕЛОВ</div>
+      <div class="icon"><img src="/assets/icons/scrollDown.svg" alt=""></div>
     </div>
 
   </div>
 </template>
 
 <style lang="sass">
- 
+.blockTitle
+  display: flex
+  flex-direction: column
+  align-items: center
+  .title
+    font-size: 72px
+    font-weight: bold
+    color: #fff  
 .mainSlide
   position: relative
   display: flex
@@ -48,7 +50,7 @@
   .btnNav
     padding: 0 0 40px 0
     .btn
-      // border: 1px solid $accentGrey
+      border: 1px solid $accentGrey
       border-radius: 25px 
       background-color: $accentGrey
       color: #fff

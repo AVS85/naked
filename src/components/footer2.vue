@@ -1,14 +1,14 @@
 <template>
     <div class="layoutFooter2 container-fluid">
-        <div class="row align-items-center">
-            <div class="col item itemL">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-auto item itemL">
                 <div class="link">© Naked, 2020. Все права защищены</div>
             </div>
             <div class="col-auto item">
                 <img src="/assets/icons/fb.svg" alt="">
                 <img src="/assets/icons/insta.svg" alt="">
             </div>
-            <div class="col item itemR">
+            <div class="col-auto item itemR">
                 <div class="link">Разработка сайта: Outlier</div>
             </div>
         </div>
@@ -24,7 +24,7 @@
         display: flex
         justify-content: center
         align-items: center
-        border: 1px solid red
+        // border: 1px solid red
         // font-family: 'header'
         font-size: 15px
         .link
