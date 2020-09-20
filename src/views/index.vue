@@ -8,6 +8,13 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide slide">
           <div class="img"><img src="/assets/icons/landscape.svg" alt=""></div>
+          <div class="desc">Concept.</div>
+          <div class="outBtn">
+            <router-link to="/park-angelov" class="innerBtn">Подробнее</router-link>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <div class="img"><img src="/assets/icons/landscape.svg" alt=""></div>
           <div class="desc">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</div>
           <div class="outBtn">
             <router-link to="/landscape" class="innerBtn">Подробнее</router-link>
@@ -17,7 +24,7 @@
           <div class="img"><img src="/assets/icons/collection.svg" alt=""></div>
           <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, dignissimos nesciunt optio at debitis harum ipsum adipisci quae? Optio molestias velit ducimus nobis recusandae eum alias suscipit consequatur nisi voluptates.</div>
           <div class="outBtn">
-            <router-link to="/landscape" class="innerBtn">Подробнее</router-link>
+            <router-link to="/" class="innerBtn">Подробнее</router-link>
           </div>
         </div>
       </div> 
@@ -25,9 +32,45 @@
       <!-- <div class="swiper-button-prev">23</div>  -->
     </div>
     <div class="indexFooter container-fluid">
-      <div class="row justify-content-between">
+      <div class="row justify-content-between align-items-center">
         <div class="col-auto">© Naked, 2020. Все права защищены</div>
-        <div class="col-auto">pagginations</div>
+        <div class="col-auto">
+
+          <div class="wr-paggination">
+            <div class="item">
+              <div class="line"> <div class="halfLine"></div> </div>
+            </div>
+            <div class="item">
+              <div class="label">Concept</div>
+              <div class="line">
+                <div class="halfLine"></div>
+                <div class="dotSm"></div>
+                <div class="halfLine"></div>
+              </div>
+            </div>
+            <div class="item"
+            @click="swiperProject.slideTo(1)">
+              <div class="label active">Landscape</div>
+              <div class="line">
+                <div class="halfLine"></div>
+                <div class="dotLg"></div>
+                <div class="halfLine"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="label">Collection</div>
+              <div class="line">
+                <div class="halfLine"></div>
+                <div class="dotSm"></div>
+                <div class="halfLine"></div>
+              </div>
+            </div>
+            <div class="item"> <div class="line"> <div class="halfLine"></div> </div>
+            </div>
+          </div>
+
+        </div>
+
         <div class="col-auto">Разработка сайта: Outlier</div>
       </div>
       
@@ -36,12 +79,59 @@
 </template>
 
 <style lang="sass">
+ 
+  
+.wr-paggination
+  // border: 1px dotted #fff
+  display: flex
+  align-items: flex-end
+  padding: 10px
+  .item
+    // border: 1px dotted red
+
+    .label
+      // border: 1px dotted #fff
+      font-size: 14px
+      text-align: center
+      &.active
+        font-size: 16px
+        font-weight: bold
+
+
+    .line
+      display: flex
+      align-items: center
+      // border: 1px dotted #fff
+      height: 30px
+
+      .halfLine
+        border-bottom: 1px solid $accentGrey
+        min-width: 35px
+        width: 100%
+      .dotSm
+        border: 1px solid $accentGrey
+        border-radius: 5px
+        background: $accentGrey
+        margin: 6px
+        min-height: 8px
+        min-width: 8px
+      .dotLg
+        border: 9px solid $accentGrey
+        border-radius: 13px
+        background: #fff
+        margin: 6px
+        min-height: 25px
+        min-width: 25px 
+  
+ 
+ 
+
 .swiper-container
   width: 100%
   height: 100%
 
 .indexLayout
-  border: 1px solid red
+  // border: 1px solid red
   background: #949494
   background-repeat: no-repeat
   background-size: cover
@@ -53,15 +143,15 @@
   min-height: 100vh
   // max-width: 100%
   .indexSlider
-    border: 1px solid red
+    // border: 1px solid red
     color: #fff
     padding: 64px 0 64px 0
     .slide
-      border: 1px solid green
+      // border: 1px solid green
       // width: 100%
       // min-height: 100
       .img
-        border: 1px solid green
+        // border: 1px solid green
         width: 100%
         overflow: hidden
         img
@@ -70,7 +160,7 @@
             width: 100%
 
       .desc
-        border: 1px solid yellow
+        // border: 1px solid yellow
 
         font-size: 18px
         line-height: 28px
@@ -100,6 +190,7 @@
   
   .indexFooter
     color: #fff
+    font-size: 15px
 </style>
 
 
@@ -121,14 +212,14 @@ export default {
   mounted() {
     this.swiperProject = new Swiper('.indexSlider', {
       // runCallbacksOnInit: false,
-      slidesPerView: 1,
-      spaceBetween: 30,
+      slidesPerView: 3,
+      spaceBetween: 300,
       // freeMode: true,
-      // centeredSlides: true,
-      loop: true,
+      centeredSlides: true,
+      // loop: true,
       // loopPreventsSlide: true,
       // slideToClickedSlide: true,
-      // effect: 'fade',
+      effect: 'fade',
       speed: 500,
       // grabCursor: true,
       // autoplay: {
