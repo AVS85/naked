@@ -46,6 +46,11 @@
     img
       width: 100%
   .btnNav
+
+    // border: 1px solid red
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
     padding: 0 0 40px 0
     .btn
       // border: 1px solid $accentGrey

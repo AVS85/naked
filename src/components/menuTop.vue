@@ -6,7 +6,9 @@
                 <div class="link">Контакты</div>
             </div>
             <div class="col-auto item">
+                <router-link to="/">
                 <img src="assets/icons/logoNaked.svg" alt="">
+                </router-link>
             </div>
             <div class="d-none d-md-flex col item itemR">
                 <div class="link">

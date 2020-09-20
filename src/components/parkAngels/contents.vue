@@ -4,12 +4,12 @@
   <div class="sectionLayout1 lite"
   style=" ">
     <div class="row justify-content-end">
-      <div class="col-6 cntIMG"
+      <div class="d-none d-lg-flex col-lg-6 cntIMG"
       style="background-image: url(/assets/bg/park-angelov-about.jpg)"></div>
     </div>
     <div class="container-fluid slideContent noborder">
       <div class="row justify-content-between align-items-center">
-        <div class="col-5 leftSide">
+        <div class="col-lg-5 leftSide">
           <h3 class="title">«ПАРК АНГЕЛОВ»<br>Благоустройство территории</h3>
           <p class="text">Концепция мемориального сквера под названием «Парк Ангелов» в городе Кемерове. Компания Naked принимала непосредственное участие в создании концепции и благоустройстве парка совместно с автором проекта. Нами были придуманы, спроектированы, произведены, доставлены и установлены следующие архитектурные элементы:</p>
         </div>
@@ -23,11 +23,11 @@
   <div class="sectionLayoutProject dark">
     <div class="container-fluid">
       <div class="slideContent row flex-row-reverse justify-content-between  d-flex align-items-stretch">
-        <div class="col-4 leftSide">
+        <div class="col-lg-4 leftSide">
           <h3 class="title">Амфитеатр</h3>
           <p class="text">Сидения с декоративно- художественной перфорацией, обеспечивающей нужную конвекцию. Поверхность металла сатинируется по нашей авторской технологии, благодаря которой сидения меньше нагреваются от солнечных лучей. Особая эстетическая ценность этой конструкции заключается в том, что каждый пролет каждого яруса амфитеатра доводится вручную, конструкция выглядит цельной, точно повторяя спроектированную авторами геометрию.</p>
         </div>
-        <div class="col-8 rightSide">
+        <div class="col-lg-8 rightSide">
           <div class="imgOutBorder"
           style="background-image: url(/assets/bg/park-angelov-amfiteatr.jpg)"></div>
         </div>
@@ -38,11 +38,11 @@
   <div class="sectionLayoutProject dark">
     <div class="container-fluid">
       <div class="slideContent row justify-content-between  d-flex align-items-stretch">
-        <div class="col-4 leftSide">
+        <div class="col-lg-4 leftSide">
           <h3 class="title">Клумбы</h3>
           <p class="text">Декоративные клумбы с подсветкой и облицовкой из нержавеющей стали с художественной фрезеровкой иперфорацией в стиле contemporary art. Это полностью готовая конструкция - цельносварная, сборная, легкая в эксплуатации.</p>
         </div>
-        <div class="col-8 rightSide">
+        <div class="col-lg-8 rightSide">
           <div class="imgOutBorder"
           style="background-image: url(/assets/bg/park-angelov-clumbs.jpg)"></div>
         </div>
@@ -53,11 +53,11 @@
   <div class="sectionLayoutProject dark">
     <div class="container-fluid">
       <div class="slideContent row flex-row-reverse   d-flex align-items-stretch">
-        <div class="col-4 leftSide">
+        <div class="col-lg-4 leftSide">
           <h3 class="title">Детские горки</h3>
           <p class="text">Детские горки представляют из себя цельные, литые, параметрические конструкции с ручной доводкой. Этоу никальная технология компании Naked, имеющая ряд эстетических и практических преимуществ.</p>
         </div>
-        <div class="col-8 rightSide">
+        <div class="col-lg-8 rightSide">
           <div class="imgOutBorder"
           style="background-image: url(/assets/bg/park-angelov-child-mount.jpg)"></div>
         </div>
@@ -68,12 +68,12 @@
   <div class="sectionLayoutProject dark">
     <div class="container-fluid">
       <div class="slideContent row justify-content-between  d-flex align-items-stretch">
-        <div class="col-4 leftSide">
+        <div class="col-lg-4 leftSide">
           <h3 class="title">Приствольные решетки</h3>
           <p class="text">Выполнены в стиле contemporary art по индивидуальному проекту, из листовой нержавеющей стали марки AISI 316, толщиной 6 мм, размеры основания: 2,6 м x 2,6 м. Поверхность с художественной обработкой с пескостроением и стеклостроением по нашей авторской уникальной технологии- под одним углом она матовая и темная, а под другим- дает металлический блеск за счет обработки стеклянными шариками определенной фракции. Художественной задумкой при создании решеток, которые по сути являются самостоятельными арт-объектом, являются цитаты великих людей, которые были тщательным образом продуманы и выбраны нашей компанией и согласованы с руководством города Кемерово и автором проекта. Данные воодушевляющие цитаты подчеркивают, что это место, где люди будут встречаться и отдавать дань памяти ушедшим, но при этом вспоминать их со светлой грустью и смело смотреть в завтрашний день.</p>
           <p class="text">Всего изготовлено 60 приствольных решеток по числу погибших: 30 решеток с логотипом парка и 30 решеток с цитатами великих людей. Фрeзеровка производилась холодным лазером с последующей ручной доводкой.</p>
         </div>
-        <div class="col-8 rightSide">
+        <div class="col-lg-8 rightSide">
           <div class="imgOutBorder"
           style="background-image: url(/assets/bg/park-angelov-tree-grid.jpg)"></div>
         </div>
@@ -84,11 +84,11 @@
   <div class="sectionLayoutProject dark">
     <div class="container-fluid">
       <div class="slideContent row flex-row-reverse justify-content-between  d-flex align-items-stretch">
-        <div class="col-4 leftSide">
+        <div class="col-lg-4 leftSide">
           <h3 class="title">Урны</h3>
           <p class="text">50 урн с декоративной поверхностью из двойного двухслойного металла, подложкой из окрашенного порошковой краской оцинкованного листа и финишный слой из нержавейки, фрезерованный декоративным узором падающих кленовых листьев, которые являются одной из центральных тем парка. Падающие кленовые листья символизируют осень-время года, когда царствует вода, природа засыпает, идут дожди. Это как раз та среда, которая успокаивает пепелище пожара.</p>
         </div>
-        <div class="col-8 rightSide">
+        <div class="col-lg-8 rightSide">
           <div class="imgOutBorder"
           style="background-image: url(/assets/bg/park-angelov-urn.jpg)"></div>
         </div>
@@ -168,6 +168,8 @@
   background-repeat: no-repeat
   background-position: 0 50% 
   padding: 125px 40px
+  @media (max-width: 992px)
+    padding: 30px 10px
   
   &.dark
     background-color: $bgDark
@@ -201,12 +203,18 @@
     display: flex
     align-items: center
     min-height: 685px
+    @media (max-width: 992px)
+      padding-bottom: 15px
+        // justify-content: flex-start
     .leftSide
       // border: 2px solid green
       display: flex
       flex-direction: column
       justify-content: center
       padding: 35px
+      @media (max-width: 992px)
+        justify-content: flex-start
+        padding: 10px
     .rightSide
       // border: 2px solid yellow
       .imgOutBorder
@@ -221,7 +229,15 @@
         margin-top: -50px
         margin-bottom: -50px
         margin: -50px 25px -50px 25px
-
+        
+        @media (max-width: 992px)
+          // position: static
+          // padding-bottom: 30px
+          height: calc(100%)
+          width: calc(100% )
+          margin-top: 0px
+          margin-bottom: 0px
+          margin: 0 0 270px 0
 
 
 
