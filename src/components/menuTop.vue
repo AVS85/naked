@@ -11,13 +11,13 @@
                 </router-link>
             </div>
             <div class="d-none d-md-flex col item itemR">
-                <div class="link">
+                <div class="link" v-if="!indexpage">
                     <router-link to="/park-angelov" >Concept</router-link>
                     </div>
-                <div class="link">
+                <div class="link" v-if="!indexpage">
                     <router-link to="/landscape" >Landscape</router-link>
                     </div>
-                <div class="link">
+                <div class="link" v-if="!indexpage">
                     <router-link to="/" >Collection</router-link>
                     </div>
                 <div class="lang active">Ru</div>
@@ -26,18 +26,33 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            
+        }
+    },
+    props: {
+        indexpage: Boolean
+    }
+}
+</script>
 <style lang="sass">
 .layoutMenuTop
     // position: absolute
-    padding: 0 30px 0 30px
+    padding: 0 30px 15px 30px
     z-index: 99
     .item
         display: flex
         justify-content: center
         align-items: center
-        border: 1px solid red
+        // border: 1px solid red
         font-family: 'header'
         font-size: 16px
+        @media (max-width: 576px)
+            padding: 0
+
         .link
             color: #fff
             padding: 0 25px 0 25px
