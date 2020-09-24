@@ -37,7 +37,7 @@ body
     background-color: #fff
     font-family: 'text', sans-serif
     // margin: 0
-    // overflow-y: scroll
+    overflow-y: scroll
 
     // padding: 2.5rem
 h1, h2, h3, h4, h5, h6
@@ -73,32 +73,251 @@ p
     // line-height: calc(28px + 0.5vmax)
     font-family: 'text'
 
-.container
-    // max-width: 1440px
-.blockTypeMain
-    // border-bottom: 1px solid rgba(black, .15)
-    padding: 7vmax 0 7vmax 0
-    @media (min-width: 510px) 
-        padding: 120px 0 120px 0
-        
-    .blockHeader
-        // border: 1px solid red
-        padding-bottom: 4.68vmax
-        @media (min-width: 510px) 
-            padding-bottom: 90px 
-        .title
-            font-size: 4.68vmax
-            @media (min-width: 510px) 
-                font-size: 52px
-        .subtitle
-            padding-top: 3.12vmax
-            font-size: 1.8vmax
-            line-height: 2.8vmax
+// 
+.mainSlide
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  background: transparent
+  min-height: 100vh
+  padding: 40px
+  .bgMainSlide
+    position: absolute
+    // border: 1px solid red
+    bottom: 0
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    filter: brightness(.75)
+    min-height: 100% 
+    width: 100% 
+    z-index: -1
+  .labelMainSlide
+    // border: 1px solid red
+    img
+      width: 100%
+  .btnNav
+    padding: 0 0 40px 0
+    .btn
+      border: 1px solid $accentGrey
+      border-radius: 25px 
+      background-color: $accentGrey
+      color: #fff
+      font-size: 15px
+      height: 45px  
+      min-width: 225px
+      margin: 15px 15px 0 15px
+  .blockTitle
+    display: flex
+    flex-direction: column
+    align-items: center
+    .title
+      font-size: 72px
+      font-weight: bold
+      color: #fff 
 
-            @media (min-width: 510px) 
-                padding-top: 60px
-                font-size: 18px
-                line-height: 28px
+.sectionLayout1
+  position: relative
+  min-height: 100vh
+  // border: 1px solid red
+  background-repeat: no-repeat
+  background-position: 0 50% 
+  padding: 40px
+  @media (max-width: 992px)
+    padding: 10px
+  &.dark
+    background-color: $bgDark
+    color: #fff
+    .title::before
+      border-bottom: 3px solid #fff
+  &.lite
+    background-color: $bgLite
+    color: $bgDark
+    .title::before
+      border-bottom: 3px solid $bgDark
+  .title
+    position: relative
+    padding-bottom: 40px
+    font-size: 48px
+    font-weight: bold
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0px
+      max-width: 354px
+      width: 100%
+    @media (max-width: 992px)
+      font-size: 36px
+  .text
+    padding: 36px 0 0 0
+    font-size: 16px
+    line-height: 28px
+
+
+  .cntIMG
+    // position: relative
+    position: absolute
+    // border: 1px solid yellow
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: cover
+    height: 100%
+    top: 0
+    right: 0
+    bottom: 0
+    // margin: -40px -25px -40px -40px
+
+  .slideContent
+    border: 14px solid $border
+    position: relative
+    display: flex
+    align-items: center
+    padding: 40px
+    min-height: calc(100vh - 68px)
+    // width: calc(100% - 68px)
+    z-index: 999
+    @media (max-width: 992px)
+      padding: 10px
+    &.noborder
+      border: 0px
+
+    .row
+      height: 100%
+      // border: 1px solid yellow
+      // .leftSide
+      .rightSide
+        img
+          width: 100%
+        .materials
+          // border: 1px solid green
+          display: flex
+          justify-content: center
+          // justify-content: flex-end
+          flex-wrap: wrap
+          // align-items: center
+          // justify-content: space-between
+          .material
+            // border: 1px solid gray
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 20px
+            width: 192px
+            // flex: 0
+            .img
+              min-height: 120px
+              min-width: 120px
+            .desc
+              text-align: center
+              font-family: 'header'
+              font-size: 17px
+
+.sectionLayoutProject
+  background-repeat: no-repeat
+  background-position: 0 50% 
+  padding: 125px 40px
+  @media (max-width: 992px)
+    padding: 30px 10px
+  
+  &.dark
+    background-color: $bgDark
+    color: #fff
+    .title::before
+      border-bottom: 1px solid #fff
+  &.lite
+    background-color: $bgLite
+    color: $bgDark
+    .title::before
+      border-bottom: 1px solid $bgDark
+  .title
+    position: relative
+    padding-bottom: 40px
+    font-size: 48px
+    font-weight: bold
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0px
+      max-width: 354px
+      width: 100%
+  .text
+    padding: 36px 0 0 0
+    font-size: 16px
+    line-height: 28px
+
+  .slideContent
+    border: 14px solid $border
+    position: relative
+    display: flex
+    align-items: center
+    min-height: 685px
+    @media (max-width: 992px)
+      padding-bottom: 15px
+        // justify-content: flex-start
+    .leftSide
+      // border: 2px solid green
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 35px
+      @media (max-width: 992px)
+        justify-content: flex-start
+        padding: 10px
+    .rightSide
+      // border: 2px solid yellow
+      .imgOutBorder
+        // border: 2px solid yellow
+        position: relative
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: cover
+        // border: 2px solid orange
+        height: calc(100% + 100px)
+        width: calc(100% - 50px)
+        margin-top: -50px
+        margin-bottom: -50px
+        margin: -50px 25px -50px 25px
+        
+        @media (max-width: 992px)
+            // position: static
+            // padding-bottom: 30px
+            height: calc(100%)
+            width: calc(100% )
+            margin-top: 0px
+            margin-bottom: 0px
+            margin: 0 0 270px 0
+        @media (max-width: 768px)
+            height: 70vh
+            margin: 0 0 0px 0
+
+// .container
+//     // max-width: 1440px
+// .blockTypeMain
+//     // border-bottom: 1px solid rgba(black, .15)
+//     padding: 7vmax 0 7vmax 0
+//     @media (min-width: 510px) 
+//         padding: 120px 0 120px 0
+        
+//     .blockHeader
+//         // border: 1px solid red
+//         padding-bottom: 4.68vmax
+//         @media (min-width: 510px) 
+//             padding-bottom: 90px 
+//         .title
+//             font-size: 4.68vmax
+//             @media (min-width: 510px) 
+//                 font-size: 52px
+//         .subtitle
+//             padding-top: 3.12vmax
+//             font-size: 1.8vmax
+//             line-height: 2.8vmax
+
+//             @media (min-width: 510px) 
+//                 padding-top: 60px
+//                 font-size: 18px
+//                 line-height: 28px
  
 
 

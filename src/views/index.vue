@@ -1,35 +1,19 @@
 <template>
-  <div class="indexLayout"
-  style="background-image: url(/assets/bg/index-landscape.jpg)">
+  <div class="indexLayout" >
 
     <menuTop 
     v-bind:indexpage="true" /> 
 
-    <!-- <div class="swiper-container indexSlider">
+    <div class="swiper-container indexSliderBG">
       <div class="swiper-wrapper">
-        <div class="swiper-slide slide">
-          <div class="img"><img src="/assets/icons/landscape.svg" alt=""></div>
-          <div class="desc">Concept.</div>
-          <div class="outBtn">
-            <router-link to="/park-angelov" class="innerBtn">Подробнее</router-link>
-          </div>
+        <div class="swiper-slide" style="background-image: url(/assets/bg/index-concept.jpg)">
         </div>
-        <div class="swiper-slide slide">
-          <div class="img"><img src="/assets/icons/landscape.svg" alt=""></div>
-          <div class="desc">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</div>
-          <div class="outBtn">
-            <router-link to="/landscape" class="innerBtn">Подробнее</router-link>
-          </div>
+        <div class="swiper-slide" style="background-image: url(/assets/bg/index-landscape.jpg)">
         </div>
-        <div class="swiper-slide slide">
-          <div class="img"><img src="/assets/icons/collection.svg" alt=""></div>
-          <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, dignissimos nesciunt optio at debitis harum ipsum adipisci quae? Optio molestias velit ducimus nobis recusandae eum alias suscipit consequatur nisi voluptates.</div>
-          <div class="outBtn">
-            <router-link to="/" class="innerBtn">Подробнее</router-link>
-          </div>
+        <div class="swiper-slide" style="background-image: url(/assets/bg/index-collection.jpg)">
         </div>
-      </div> 
-    </div> -->
+      </div>
+    </div>
 
     <div class="container-fluid">
       <div class="row">
@@ -38,9 +22,9 @@
             <div class="swiper-wrapper ">
               <div class="swiper-slide">
                 <div class="slide-inner">
-                  <div class="img"><img src="/assets/icons/landscape.svg" alt=""></div>
+                  <div class="img"><img src="/assets/icons/concept.svg" alt=""></div>
                   <div class="desc">Concept.</div>
-                  <div class="outBtn"> <router-link to="/park-angelov" class="innerBtn">Подробнее</router-link>
+                  <div class="outBtn"> <router-link to="/concept" class="innerBtn">Подробнее</router-link>
                   </div>
                 </div>
               </div>
@@ -58,7 +42,7 @@
                   <div class="img"><img src="/assets/icons/collection.svg" alt=""></div>
                   <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, dignissimos nesciunt optio at debitis harum ipsum adipisci quae? Optio molestias velit ducimus nobis recusandae eum alias suscipit consequatur nisi voluptates.</div>
                   <div class="outBtn">
-                    <router-link to="/" class="innerBtn">Подробнее</router-link>
+                    <router-link to="/collection" class="innerBtn">Подробнее</router-link>
                   </div>
                 </div>
               </div>
@@ -135,17 +119,20 @@
 
 <style lang="sass">
  
-  
-
+.indexSliderBG
+  // border: 1px solid red
+  height: 100vh
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 0
+  .swiper-slide
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
   
  
- 
-
-.swiper-container
-  // overflow: hidden
-  // width: 100%
-  // height: 100%
-
 .indexLayout
   // border: 1px solid red
   background: #949494
@@ -275,6 +262,7 @@ export default {
   data() {
     return {
       swiperProject: Object,
+      swiperProjectBG: Object,
       activeSlideIndex: 1
     }
   },
@@ -320,12 +308,51 @@ export default {
         }.bind(this),
       }
     });
+    this.swiperProjectBG = new Swiper('.indexSliderBG', {
+      // runCallbacksOnInit: false,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      // freeMode: true,
+      // centeredSlides: true,
+      // loop: true,
+      // loopPreventsSlide: true,
+      // slideToClickedSlide: true,
+      effect: 'fade',
+      speed: 500,
+      // grabCursor: true,
+      // autoplay: {
+      //   delay: 0,
+      //   disableOnInteraction: false,
+      //   reverseDirection: true
+      // },
+      // navigation: {
+      //   nextEl: '.sw-project-slider-next',
+      //   prevEl: '.sw-project-slider-prev',
+      // },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        init(){
+            this.slideTo(1)
+            // return this.activeSlideIndex = 1
+        },
+        slideChange: function (e) {
+          // console.log(e.activeIndex);
+          this.activeSlideIndex = e.activeIndex
+          // console.log(this.activeSlideIndex);
+        }.bind(this),
+      }
+    });
     // console.log(this.swiperProject);
 
   },
   watch: {
     activeSlideIndex(){
-      // console.log(this.activeSlideIndex);    
+      this.swiperProjectBG.slideTo(this.activeSlideIndex)
+      // console.log(this.activeSlideIndex); 
+      console.log('aSI');   
     }
   },
 }

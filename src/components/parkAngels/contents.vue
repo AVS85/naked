@@ -164,80 +164,80 @@
         font-weight: bold 
         padding-left: 35px
 
-.sectionLayoutProject
-  background-repeat: no-repeat
-  background-position: 0 50% 
-  padding: 125px 40px
-  @media (max-width: 992px)
-    padding: 30px 10px
+// .sectionLayoutProject
+//   background-repeat: no-repeat
+//   background-position: 0 50% 
+//   padding: 125px 40px
+//   @media (max-width: 992px)
+//     padding: 30px 10px
   
-  &.dark
-    background-color: $bgDark
-    color: #fff
-    .title::before
-      border-bottom: 1px solid #fff
-  &.lite
-    background-color: $bgLite
-    color: $bgDark
-    .title::before
-      border-bottom: 1px solid $bgDark
-  .title
-    position: relative
-    padding-bottom: 40px
-    font-size: 48px
-    font-weight: bold
-    &:before
-      content: ''
-      position: absolute
-      bottom: 0px
-      max-width: 354px
-      width: 100%
-  .text
-    padding: 36px 0 0 0
-    font-size: 16px
-    line-height: 28px
+//   &.dark
+//     background-color: $bgDark
+//     color: #fff
+//     .title::before
+//       border-bottom: 1px solid #fff
+//   &.lite
+//     background-color: $bgLite
+//     color: $bgDark
+//     .title::before
+//       border-bottom: 1px solid $bgDark
+//   .title
+//     position: relative
+//     padding-bottom: 40px
+//     font-size: 48px
+//     font-weight: bold
+//     &:before
+//       content: ''
+//       position: absolute
+//       bottom: 0px
+//       max-width: 354px
+//       width: 100%
+//   .text
+//     padding: 36px 0 0 0
+//     font-size: 16px
+//     line-height: 28px
 
-  .slideContent
-    border: 14px solid $border
-    position: relative
-    display: flex
-    align-items: center
-    min-height: 685px
-    @media (max-width: 992px)
-      padding-bottom: 15px
-        // justify-content: flex-start
-    .leftSide
-      // border: 2px solid green
-      display: flex
-      flex-direction: column
-      justify-content: center
-      padding: 35px
-      @media (max-width: 992px)
-        justify-content: flex-start
-        padding: 10px
-    .rightSide
-      // border: 2px solid yellow
-      .imgOutBorder
-        // border: 2px solid yellow
-        position: relative
-        background-repeat: no-repeat
-        background-position: center
-        background-size: cover
-        // border: 2px solid orange
-        height: calc(100% + 100px)
-        width: calc(100% - 50px)
-        margin-top: -50px
-        margin-bottom: -50px
-        margin: -50px 25px -50px 25px
+//   .slideContent
+//     border: 14px solid $border
+//     position: relative
+//     display: flex
+//     align-items: center
+//     min-height: 685px
+//     @media (max-width: 992px)
+//       padding-bottom: 15px
+//         // justify-content: flex-start
+//     .leftSide
+//       // border: 2px solid green
+//       display: flex
+//       flex-direction: column
+//       justify-content: center
+//       padding: 35px
+//       @media (max-width: 992px)
+//         justify-content: flex-start
+//         padding: 10px
+//     .rightSide
+//       // border: 2px solid yellow
+//       .imgOutBorder
+//         // border: 2px solid yellow
+//         position: relative
+//         background-repeat: no-repeat
+//         background-position: center
+//         background-size: cover
+//         // border: 2px solid orange
+//         height: calc(100% + 100px)
+//         width: calc(100% - 50px)
+//         margin-top: -50px
+//         margin-bottom: -50px
+//         margin: -50px 25px -50px 25px
         
-        @media (max-width: 992px)
-          // position: static
-          // padding-bottom: 30px
-          height: calc(100%)
-          width: calc(100% )
-          margin-top: 0px
-          margin-bottom: 0px
-          margin: 0 0 270px 0
+//         @media (max-width: 992px)
+//           // position: static
+//           // padding-bottom: 30px
+//           height: calc(100%)
+//           width: calc(100% )
+//           margin-top: 0px
+//           margin-bottom: 0px
+//           margin: 0 0 270px 0
 
 
 

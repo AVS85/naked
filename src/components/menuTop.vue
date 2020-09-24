@@ -2,8 +2,12 @@
     <div class="layoutMenuTop container-fluid">
         <div class="row align-items-center">
             <div class="d-none d-lg-flex col item itemL">
-                <div class="link">О нас</div>
-                <div class="link">Контакты</div>
+                <div class="link">
+                    <router-link to="/about">О нас</router-link>
+                </div>
+                <div class="link">
+                    <router-link to="/contacts">Контакты</router-link>
+                </div>
             </div>
             <div class="col-auto item">
                 <router-link to="/">
@@ -12,13 +16,13 @@
             </div>
             <div class="d-none d-md-flex col item itemR">
                 <div class="link" v-if="!indexpage">
-                    <router-link to="/park-angelov" >Concept</router-link>
+                    <router-link to="/concept">Concept</router-link>
+                </div>
+                <div class="link" v-if="!indexpage">
+                    <router-link to="/landscape">Landscape</router-link>
                     </div>
                 <div class="link" v-if="!indexpage">
-                    <router-link to="/landscape" >Landscape</router-link>
-                    </div>
-                <div class="link" v-if="!indexpage">
-                    <router-link to="/" >Collection</router-link>
+                    <router-link to="/collection">Collection</router-link>
                     </div>
                 <div class="lang active">Ru</div>
                 <div class="lang">En</div>
