@@ -6,9 +6,9 @@
 
     <div class="swiper-container indexSliderBG">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url(/assets/bg/index-concept.jpg)">
-        </div>
         <div class="swiper-slide" style="background-image: url(/assets/bg/index-landscape.jpg)">
+        </div>
+        <div class="swiper-slide" style="background-image: url(/assets/bg/index-concept.jpg)">
         </div>
         <div class="swiper-slide" style="background-image: url(/assets/bg/index-collection.jpg)">
         </div>
@@ -20,26 +20,31 @@
         <div class="col-12">
           <div class="swiper-container indexSlider">
             <div class="swiper-wrapper ">
+
               <div class="swiper-slide">
                 <div class="slide-inner">
-                  <div class="img"><img src="/assets/icons/concept.svg" alt=""></div>
-                  <div class="desc">Concept.</div>
-                  <div class="outBtn"> <router-link to="/concept" class="innerBtn">Подробнее</router-link>
+                  <div class="img">
+                    <img src="/assets/icons/landscapeToConcept.svg" alt="">
                   </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-inner">
-                  <div class="img"><img src="/assets/icons/landscape.svg" alt=""></div>
                   <div class="desc">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</div>
                   <div class="outBtn">
                     <router-link to="/landscape" class="innerBtn">Подробнее</router-link>
                   </div>
                 </div>
               </div>
+
               <div class="swiper-slide">
                 <div class="slide-inner">
-                  <div class="img"><img src="/assets/icons/collection.svg" alt=""></div>
+                  <div class="img"><img src="/assets/icons/conceptToCollection.svg" alt=""></div>
+                  <div class="desc">Concept.</div>
+                  <div class="outBtn"> <router-link to="/concept" class="innerBtn">Подробнее</router-link>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-inner">
+                  <div class="img"><img src="/assets/icons/collectionToLandscape.svg" alt=""></div>
                   <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, dignissimos nesciunt optio at debitis harum ipsum adipisci quae? Optio molestias velit ducimus nobis recusandae eum alias suscipit consequatur nisi voluptates.</div>
                   <div class="outBtn">
                     <router-link to="/collection" class="innerBtn">Подробнее</router-link>
@@ -65,12 +70,14 @@
           <!-- <div class="wr-paggination"> -->
 
             <div class="item">
-              <div class="line"> <div class="halfLine"></div> </div>
+              <div class="line"><div class="halfLine"></div></div>
             </div>
-            <div class="item" 
-            @click="swiperProject.slideTo(0)">
+
+            <div class="item" @click="swiperProject.slideTo(0)">
               <div class="label"
-              v-bind:class="{active: activeSlideIndex == 0}">Concept</div>
+              v-bind:class="{active: activeSlideIndex == 0}">
+              Landscape
+              </div>
               <div class="line">
                 <div class="halfLine"></div>
                 <div class="dotSm"
@@ -78,10 +85,12 @@
                 <div class="halfLine"></div>
               </div>
             </div>
-            <div class="item"
-            @click="swiperProject.slideTo(1)">
+
+            <div class="item" @click="swiperProject.slideTo(1)">
               <div class="label"
-              v-bind:class="{active: activeSlideIndex == 1}">Landscape</div>
+              v-bind:class="{active: activeSlideIndex == 1}">
+              Concept
+              </div>
               <div class="line">
                 <div class="halfLine"></div>
                 <div class="dotSm"
@@ -89,10 +98,11 @@
                 <div class="halfLine"></div>
               </div>
             </div>
-            <div class="item"
-            @click="swiperProject.slideTo(2)">
+            <div class="item" @click="swiperProject.slideTo(2)">
               <div class="label"
-              v-bind:class="{active: activeSlideIndex == 2}">Collection</div>
+              v-bind:class="{active: activeSlideIndex == 2}">
+              Collection
+              </div>
               <div class="line">
                 <div class="halfLine"></div>
                 <div class="dotSm"
@@ -100,7 +110,9 @@
                 <div class="halfLine"></div>
               </div>
             </div>
-            <div class="item"> <div class="line"> <div class="halfLine"></div> </div>
+
+            <div class="item">
+               <div class="line"> <div class="halfLine"> </div> </div>
             </div>
           </div>
 
@@ -158,18 +170,33 @@
       opacity: 0 !important
     .swiper-slide-active
       opacity: 1 !important
-    .slide-inner
+
+    .swiper-slide
       // border: 1px solid green
-      // width: 100%
-      // min-height: 100
-      .img
+      // position: relative
+      // overflow: visible
+      .slide-inner
+        // position: relative
         // border: 1px solid green
-        width: 100%
-        // overflow: hidden
-        img
-          // width: 100%
-          @media (max-width: 992px)
-            width: 100%
+        // width: 100%
+        // min-height: 100
+        overflow: visible
+
+        .img
+          // position: absolute
+          // left: 0
+          // top: 0
+          // border: 3px solid #fff
+          mask-image: linear-gradient(90deg, #fff 70%, transparent 98%)
+          // width: 100vw
+          // z-index: 522
+          // overflow: visible
+          img
+            // width: 100%
+            // overflow: visible
+
+            @media (max-width: 992px)
+              width: 150%
 
       .desc
         // border: 1px solid yellow
@@ -207,20 +234,29 @@
     //   position: relative
     //   right: 0
     .wr-paggination
+      // position: relative
+      // z-index: 999
       // border: 1px dotted #fff
       display: flex
       align-items: flex-end
+      justify-content: center
       padding: 10px
+      // width: 100%
       @media (max-width: 576px)
         transform: scale(.7)
         padding: 0
       .item
+        
         // border: 1px dotted red
 
+
+        // position: relative
+        // z-index: 9999
         .label
           // border: 1px dotted #fff
           font-size: 14px
           text-align: center
+          cursor: pointer
           &.active
             font-size: 16px
             font-weight: bold
@@ -263,7 +299,7 @@ export default {
     return {
       swiperProject: Object,
       swiperProjectBG: Object,
-      activeSlideIndex: 1
+      activeSlideIndex: 0
     }
   },
   components: {
@@ -292,54 +328,36 @@ export default {
       //   nextEl: '.sw-project-slider-next',
       //   prevEl: '.sw-project-slider-prev',
       // },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+      // navigation: {
+        // nextEl: '.swiper-button-next',
+        // prevEl: '.swiper-button-prev',
+      // },
       on: {
         init(){
-            this.slideTo(1)
+            // this.slideTo(this.activeSlideIndex)
+            // this.slideTo(this.activeSlideIndex)
             // return this.activeSlideIndex = 1
         },
         slideChange: function (e) {
           // console.log(e.activeIndex);
           this.activeSlideIndex = e.activeIndex
           // console.log(this.activeSlideIndex);
-        }.bind(this),
+        }.bind(this)
       }
     });
+
     this.swiperProjectBG = new Swiper('.indexSliderBG', {
-      // runCallbacksOnInit: false,
       slidesPerView: 1,
       spaceBetween: 30,
-      // freeMode: true,
-      // centeredSlides: true,
-      // loop: true,
-      // loopPreventsSlide: true,
-      // slideToClickedSlide: true,
       effect: 'fade',
       speed: 500,
-      // grabCursor: true,
-      // autoplay: {
-      //   delay: 0,
-      //   disableOnInteraction: false,
-      //   reverseDirection: true
-      // },
-      // navigation: {
-      //   nextEl: '.sw-project-slider-next',
-      //   prevEl: '.sw-project-slider-prev',
-      // },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
       on: {
         init(){
-            this.slideTo(1)
+            // this.slideTo(1)
             // return this.activeSlideIndex = 1
         },
         slideChange: function (e) {
-          // console.log(e.activeIndex);
+          console.log(e.activeIndex);
           this.activeSlideIndex = e.activeIndex
           // console.log(this.activeSlideIndex);
         }.bind(this),

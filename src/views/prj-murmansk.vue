@@ -34,7 +34,7 @@
   </div>
 
 
-
+  <otherProject/>
     <footer2 />
   </div>
 </template>
@@ -51,6 +51,7 @@
 // import contents from '@/components/parkAngels/contents.vue'
 
 import menuTop from '@/components/menuTop.vue'
+import otherProject from '@/components/otherProject.vue'
 import footer2 from '@/components/footer2.vue'
 
 
@@ -60,6 +61,7 @@ export default {
     // mainSlide,
     // contents,
     menuTop,
+    otherProject,
     footer2
   }
 }

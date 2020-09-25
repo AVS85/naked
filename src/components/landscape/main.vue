@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid mainSlide">
     <div class="bgMainSlide"
-    style="background-image: url(/assets/bg/landscape-main.jpg)"></div>
+    style="background-image: url(/assets/bg/pr-derbent-main.jpg)"></div>
 
     <menuTop /> 
 

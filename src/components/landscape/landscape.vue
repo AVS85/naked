@@ -95,7 +95,7 @@
     </div>
   </div>
 
-  <div id="lsProjects" class="container-fluid layoutSliderProject">
+  <div id="lsProjects" class="container-fluid layoutOtherProject">
     <div class="row justify-content-center">
       <div class="col-auto titleSliderProject">Реализованные проекты</div>
     </div>
@@ -127,7 +127,7 @@
 </template>
 
 <style lang="sass">
-.layoutSliderProject
+.layoutOtherProject
   position: relative
   // border: 1px solid red
   .titleSliderProject
@@ -154,114 +154,5 @@
     padding: 40px 50px 60px 50px
     min-height: 100vh
     cursor: pointer
-// .sectionLayout1
-//   position: relative
-//   min-height: 100vh
-//   // border: 1px solid red
-//   background-repeat: no-repeat
-//   background-position: 0 50% 
-//   padding: 40px
-//   @media (max-width: 992px)
-//     padding: 10px
-//   &.dark
-//     background-color: $bgDark
-//     color: #fff
-//     .title::before
-//       border-bottom: 3px solid #fff
-//   &.lite
-//     background-color: $bgLite
-//     color: $bgDark
-//     .title::before
-//       border-bottom: 3px solid $bgDark
-//   .title
-//     position: relative
-//     padding-bottom: 40px
-//     font-size: 48px
-//     font-weight: bold
-//     &:before
-//       content: ''
-//       position: absolute
-//       bottom: 0px
-//       max-width: 354px
-//       width: 100%
-//     @media (max-width: 992px)
-//       font-size: 36px
-//   .text
-//     padding: 36px 0 0 0
-//     font-size: 16px
-//     line-height: 28px
-
-
-//   .cntIMG
-//     // position: relative
-//     position: absolute
-//     // border: 1px solid yellow
-//     background-repeat: no-repeat
-//     background-position: 0 0
-//     background-size: cover
-//     height: 100%
-//     top: 0
-//     right: 0
-//     bottom: 0
-//     // margin: -40px -25px -40px -40px
-
-//   .slideContent
-//     border: 14px solid $border
-//     position: relative
-//     display: flex
-//     align-items: center
-//     padding: 40px
-//     min-height: calc(100vh - 68px)
-//     // width: calc(100% - 68px)
-//     z-index: 999
-//     @media (max-width: 992px)
-//       padding: 10px
-//     &.noborder
-//       border: 0px
-
-//     .row
-//       height: 100%
-//       // border: 1px solid yellow
-//       .leftSide
-//       .rightSide
-//         img
-//           width: 100%
-//         .materials
-//           // border: 1px solid green
-//           display: flex
-//           justify-content: center
-//           // justify-content: flex-end
-//           flex-wrap: wrap
-//           // align-items: center
-//           // justify-content: space-between
-//           .material
-//             // border: 1px solid gray
-//             display: flex
-//             flex-direction: column
-//             align-items: center
-//             padding: 20px
-//             width: 192px
-//             // flex: 0
-//             .img
-//               min-height: 120px
-//               min-width: 120px
-//             .desc
-//               text-align: center
-//               font-family: 'header'
-//               font-size: 17px
-
-
-
-
-
-  // .slideBorder
-  //   position: absolute
-  //   border: 14px solid $border
-  //   height: calc(100% - 68px)
-  //   width: calc(100% - 68px)
-
-  //   .row
-  //     min-height: 100%
-  //     // border: 1px solid red
 
 </style>

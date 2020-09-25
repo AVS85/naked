@@ -20,23 +20,23 @@
 
     <div id="lsDesign" class="sectionLayout1 dark"
       style="background-image: url(/assets/icons/aboutLabelCompany.svg)">
-        <div class="row justify-content-end">
-          <div class="d-none d-lg-flex col-lg-6 cntIMG"
+      <div class="row justify-content-end">
+        <div class="d-none d-lg-flex col-lg-6 cntIMG"
           style="background-image: url(/assets/bg/about-company.jpg)"></div>
-        </div>
-        <div class="container-fluid slideContent">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-lg-5 leftSide">
-              <h3 class="title">Компания</h3>
-              <p class="text">Naked - архитектурно-производственный консорциум, который специализируется на реализации любых идей по концептуальному оформлению городских пространств. Мы занимаемся разработкой уникальных решений по благоустройству парковых территорий, которые отличаются новизной идеи и современным стилем. </p>
-              <p class="text">Основной задачей компании является создание единой художественной концепции пространства, которая объединяет все структурные элементы и позволяет придать любому объекту уникальный облик и индивидуальный неповторимый стиль.</p>
-            </div>
-            <div class="col-auto rightSide">
+      </div>
+      <div class="container-fluid slideContent">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-5 leftSide">
+            <h3 class="title">Компания</h3>
+            <p class="text">Naked - архитектурно-производственный консорциум, который специализируется на реализации любых идей по концептуальному оформлению городских пространств. Мы занимаемся разработкой уникальных решений по благоустройству парковых территорий, которые отличаются новизной идеи и современным стилем. </p>
+            <p class="text">Основной задачей компании является создание единой художественной концепции пространства, которая объединяет все структурные элементы и позволяет придать любому объекту уникальный облик и индивидуальный неповторимый стиль.</p>
+          </div>
+          <div class="col-auto rightSide">
               <!-- <img src="/assets/bg/landscape-manufacture.png" alt=""> -->
-            </div>
           </div>
         </div>
       </div>
+    </div>
 
       <div class="sectionLayoutProject dark">
         <div class="container-fluid">
